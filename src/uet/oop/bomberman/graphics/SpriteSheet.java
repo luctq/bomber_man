@@ -21,7 +21,7 @@ public class SpriteSheet {
 	public SpriteSheet(String path, int size) {
 		_path = path;
 		SIZE = size;
-		_pixels = new int[SIZE * SIZE];
+		_pixels = new int[SIZE *SIZE];
 		load();
 	}
 	
@@ -32,6 +32,10 @@ public class SpriteSheet {
 			int w = image.getWidth();
 			int h = image.getHeight();
 			image.getRGB(0, 0, w, h, _pixels, 0, w);
+//			for (int i=0; i<_pixels.length; i++) {
+//				System.out.println(i);
+//			}
+//			System.out.println(_pixels.length);
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(0);
